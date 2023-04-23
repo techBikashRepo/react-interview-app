@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from "react-redux";
-import * as actions from "../store/actions";
+import { DELETE } from "../store/actions";
 
 const Cart = () => {
   const cart = useSelector((state) => state.pr.cart);
@@ -8,7 +8,7 @@ const Cart = () => {
 
   const deleteHandler = (productIndex, price) => {
     dispatch({
-      type: actions.DELETE,
+      type: DELETE,
       payLoad: { productIndex, price },
     });
   };
