@@ -1,4 +1,5 @@
 import { useSelector, useDispatch } from "react-redux";
+import { LOGIN } from "../store/actions";
 
 const Login = () => {
   const users = useSelector((state) => state.lr.users);
@@ -6,7 +7,7 @@ const Login = () => {
 
   const loginHandler = (e) => {
     let loginUser = e.target.options[e.target.selectedIndex].text;
-    dispatch({ type: "LOGIN", payLoad: loginUser });
+    dispatch({ type: LOGIN, payLoad: loginUser });
   };
   return (
     <div className="customDiv">
